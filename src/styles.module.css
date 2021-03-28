@@ -7,3 +7,8 @@
   font-size: 2em;
   text-align: center;
 }
+
+#rac-title {
+  z-index: 100;
+  font-size: 2em;
+}
