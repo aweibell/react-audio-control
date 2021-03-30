@@ -14,13 +14,29 @@ npm install --save react-audio-control
 
 ```jsx
 import React, { Component } from 'react'
+import { ReactAudioControl } from 'react-audio-control'
 
-import MyComponent from 'react-audio-control'
 import 'react-audio-control/dist/index.css'
 
-class Example extends Component {
+lass Example extends Component {
+
+  const songTitle = 'Theme by TimMoor'
+
+  const togglePlay = () => {
+    // setIsPlaying(!isPlaying)
+  }
+
+  const updateVolume = (vol) => {
+    // setVolume(vol)
+  }
+
   render() {
-    return <MyComponent />
+    return <ReactAudioControl
+          updateVolume={updateVolume}
+          togglePlay={togglePlay}
+          styling={{back: {border: 'solid 2px green'}}}
+          title={songTitle}
+        />
   }
 }
 ```
