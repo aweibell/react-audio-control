@@ -56,7 +56,7 @@
     "dist"
   ],
   "dependencies": {
-    "beautiful-react-hooks": "^0.31.1",
+    "beautiful-react-hooks": "^0.32.0",
     "react-swipeable": "^6.1.0",
     "styled-components": "^5.2.1"
   }
