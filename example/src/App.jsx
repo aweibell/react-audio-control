@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 
 import { ReactAudioControl } from 'react-audio-control'
 import 'react-audio-control/dist/index.css'
@@ -34,7 +34,11 @@ const App = () => {
         <ReactAudioControl
           updateVolume={updateVolume}
           togglePlay={togglePlay}
-          styling={{back: {border: 'solid 2px green'}}}
+          styling={{
+            slider: {backgroundColor: 'teal'},
+            back: {backgroundColor: '#044', borderBottom: isPlaying ? 'solid 4px cyan' : 'solid 4px transparent'},
+            title: {fontFamily: 'Segoe Print'}
+          }}
           title={'Theme by TimMoor'}
         />
       </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 import { useSwipeable } from 'react-swipeable'
 import { useResizeObserver } from 'beautiful-react-hooks'
 import styled from 'styled-components'
@@ -8,7 +9,7 @@ const calcVolumeX = (volume, sliderWidth) => {
 }
 
 export const ReactAudioControl = ({
-  extVolume = 20,
+  extVolume,
   updateVolume,
   togglePlay,
   styling,
@@ -78,10 +79,10 @@ export const ReactAudioControl = ({
 
   return (
     <div>
-      <Container ref={sliderDivRef}>
+      <Container style={styling.back} ref={sliderDivRef}>
         <div {...handlers} onTouchEnd={(e) => e.preventDefault()}>
-          <VolumeSlider volume={calcVolumeX(volume, sliderWidth)}>
-            <RacTitle>{title}</RacTitle>
+          <VolumeSlider style={styling.slider} volume={calcVolumeX(volume, sliderWidth)}>
+            <RacTitle style={styling.title}>Title: {title}</RacTitle>
           </VolumeSlider>
         </div>
       </Container>
@@ -99,6 +100,25 @@ export const ReactAudioControl = ({
       )}
     </div>
   )
+}
+
+ReactAudioControl.propTypes = {
+  extVolume: PropTypes.number,
+  updateVolume: PropTypes.func.isRequired,
+  togglePlay: PropTypes.func.isRequired,
+  styling: PropTypes.object,
+  title: PropTypes.string.isRequired,
+  debug: PropTypes.bool,
+}
+
+ReactAudioControl.defaultProps = {
+  extVolume: 20,
+  styling: {
+    back: {},
+    slider: {},
+    title: {},
+  },
+  debug: false,
 }
 
 const Container = styled.div`
@@ -120,6 +140,7 @@ const VolumeSlider = styled.div`
 const RacTitle = styled.div`
   z-index: 10;
   height: 2em;
+  padding-left: 10px;
   position: fixed;
   display: flex;
   font-weight: bold;
@@ -139,7 +160,7 @@ const Debug = styled.div`
 
 const VolButton = styled.button`
   margin: 2px;
-  font-size: 2em;
+  font-size: 1.5em;
   width: 100px;
-  height: 1em;
+  height: 2em;
 `
