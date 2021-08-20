@@ -22,6 +22,14 @@ const App = () => {
     audioRef.current.volume = vol
   }
 
+  useEffect(() => {
+    if (audioRef.current instanceof Object) {
+      audioRef.current.onended = () => {
+        setIsPlaying(false)
+      }
+    }
+  }, [audioRef.current])
+
   return (
     <div className="main">
       <audio
