@@ -57,7 +57,7 @@
   ],
   "dependencies": {
     "beautiful-react-hooks": "^0.32.0",
-    "react-swipeable": "^6.1.0",
+    "react-swipeable": "^6.1.2",
     "styled-components": "^5.2.2"
   }
 }
