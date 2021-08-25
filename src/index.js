@@ -82,7 +82,7 @@ export const ReactAudioControl = ({
       <Container style={styling.back} ref={sliderDivRef}>
         <div {...handlers} onTouchEnd={(e) => e.preventDefault()}>
           <VolumeSlider style={styling.slider} volume={calcVolumeX(volume, sliderWidth)}>
-            <RacTitle style={styling.title}>Title: {title}</RacTitle>
+            <RacTitle style={styling.title}>{title}</RacTitle>
           </VolumeSlider>
         </div>
       </Container>
