@@ -78,7 +78,7 @@ export const ReactAudioControl = ({
   })
 
   return (
-    <div>
+    <div style={{width: '100%'}}>
       <Container style={styling.back} ref={sliderDivRef}>
         <div {...handlers} onTouchEnd={(e) => e.preventDefault()}>
           <VolumeSlider style={styling.slider} volume={calcVolumeX(volume, sliderWidth)}>
