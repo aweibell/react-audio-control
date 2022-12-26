@@ -1,6 +1,6 @@
 {
   "name": "react-audio-control",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React component providing a volume slider bar with additional controls",
   "author": "aweibell",
   "license": "MIT",
@@ -24,40 +24,40 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "react": "^17.0.2 || ^18.0.0"
   },
   "devDependencies": {
-    "microbundle-crl": "^0.13.11",
+    "@babel/core": "^7.20.7",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.0",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "@babel/core": "^7.15.5",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.1.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-config-standard-react": "^11.0.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-standard": "^4.1.0",
     "gh-pages": "^3.2.3",
-    "is-svg": ">=4.3.1",
+    "is-svg": ">=4.3.2",
+    "microbundle-crl": "^0.13.11",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.4.1",
+    "prettier": "^2.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^5.0.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "beautiful-react-hooks": "^1.0.0",
-    "prop-types": "^15.7.2",
+    "beautiful-react-hooks": "^3.11.2",
+    "prop-types": "^15.8.1",
     "react-swipeable": "^6.2.0",
     "styled-components": "^5.3.1"
   }
