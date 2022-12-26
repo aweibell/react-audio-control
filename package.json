@@ -1,6 +1,6 @@
 {
   "name": "react-audio-control",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React component providing a volume slider bar with additional controls",
   "author": "aweibell",
   "license": "MIT",
